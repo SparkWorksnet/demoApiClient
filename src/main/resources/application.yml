@@ -1,0 +1,21 @@
+www-server:
+  host: api.sensorflare.com
+  port: 443
+  address: https://${www-server.host}
+  retry:
+    backOffPeriod: 5000
+    maxAttempts: 3
+
+auth:
+  accessTokenUrl: 'https://sso.sparkworks.net/aa/oauth/token'
+  clientId: 'spark'
+  clientSecret: 'spark'
+  grantType: 'password'
+  scope:
+    - 'read'
+  username: 'spark'
+  password: 'spark'
+
+client:
+  disable-cert-validation: true
+  disable-cn-check: true
